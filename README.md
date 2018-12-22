@@ -9,7 +9,7 @@ Too much trouble changing tabs just for pausing/playing/next'ing the youtube vid
 in your chrome
 
 ### Using.
-Shortcuts:
-	"Alt+Shift+P": "Play/Pause a video."  
-    "Alt+Shift+N": "Goes to the next video."  
-    "Alt+Shift+M": "Goes to the previous video."
+* Shortcuts:  
+	*	"Alt+Shift+P": "Play/Pause a video."  
+	*    "Alt+Shift+N": "Goes to the next video."  
+	*    "Alt+Shift+M": "Goes to the previous video."
