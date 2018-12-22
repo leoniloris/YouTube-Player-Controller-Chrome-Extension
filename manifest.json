@@ -10,7 +10,7 @@
     },
     "permissions": ["http://*/*", "tabs"],
     "browser_action": {
-        "default_icon": "weeb.png"
+        "default_icon": "media/weeb.png"
     },
     "content_scripts": [{
         "matches": ["*://www.youtube.com/*"],
