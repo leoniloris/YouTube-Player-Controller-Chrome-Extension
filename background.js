@@ -15,6 +15,8 @@ function commandHandler(command) {
             if (tabs[i].url.includes("youtube.com/watch")) {
                 chrome.tabs.sendMessage(tabs[i].id, command);
             }
+            // TODO: Add third argument with function for error/response handling.
+            // 		This is supposed to change the default_icon to a paused/played symbol
         }
     });
 };
