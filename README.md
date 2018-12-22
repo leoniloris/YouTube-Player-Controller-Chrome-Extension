@@ -10,6 +10,6 @@ in your chrome
 
 ### Using.
 Shortcuts:
-	"Alt+Shift+P": "Play/Pause a video."
-    "Alt+Shift+N": "Goes to the next video."
+	"Alt+Shift+P": "Play/Pause a video."  
+    "Alt+Shift+N": "Goes to the next video."  
     "Alt+Shift+M": "Goes to the previous video."
