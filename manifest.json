@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "YTPlayerController",
     "description": "Control your youtube player from any tab.",
-    "version": "1",
+    "version": "0.0.0.1",
     "author": "Leoni Loris",
     "background": {
         "scripts": ["background.js"],
