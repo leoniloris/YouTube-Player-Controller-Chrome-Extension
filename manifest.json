@@ -9,6 +9,32 @@
         "persistent": false
     },
     "permissions": ["http://*/*", "tabs"],
-	"background_page": "messaging.html"
+    "browser_action": {
+        "default_icon": "weeb.png"
+    },
+    "content_scripts": [{
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"]
+    }],
 
+    "commands": {
+        "toogleExecution": {
+            "suggested_key": {
+                "default": "Alt+Shift+P"
+            },
+            "description": "Play/Pause a video."
+        },
+        "next": {
+            "suggested_key": {
+                "default": "Alt+Shift+N"
+            },
+            "description": "Goes to the next video."
+        },
+        "previous": {
+            "suggested_key": {
+                "default": "Alt+Shift+M"
+            },
+            "description": "Goes to the previous video."
+        }
+    }
 }
