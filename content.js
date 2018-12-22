@@ -1,59 +1,35 @@
 chrome.runtime.onMessage.addListener(gotMessage);
 
-
-
-function gotMessage(message, sender, sendResponse) {
-	runCommand(message);
-	// function stopVideo() {
-    //     player.stopVideo();
-    // }
-    // if (player) {
-    //     player.getPlayerState() == 1 ? player.pauseVideo() : player.playVideo()
-    // }
+function gotMessage(message, sender) {
+    runCommand(message);
 }
-
-
 
 function runCommand(command) {
-	console.log(command);
-	console.log(command);
-	console.log(command);
-	console.log(command);
-	console.log(command);
-	console.log(command);
-    if (command.action === "toogleExecution") {
+    if (command == "toogleExecution") {
         playOrPause();
-    } else if (command.action === "next") {
-        alert("next");
-    } else if (command.action === "previous") {
-        alert("previous");
+    } else if (command == "next") {
+        goToNextVideo();
+    } else if (command == "previous") {
+        goToPrevioustVideo();
     }
 }
 
-function playOrPause(command) {
+function playOrPause() {
     var video = document.getElementsByTagName("video")[0];
+    console.log(video);
     if (video) {
-        if (video.paused) {
-            video.play();
-            sendResponse({
-                paused: false,
-                tabId: request.tabId
-            });
-        } else {
-            video.pause();
-            sendResponse({
-                paused: true,
-                tabId: request.tabId
-            });
-        }
+        video.paused ? video.play() : video.pause();
     } else {
-        sendResponse({
-            error: 'No video object found'
-        });
+        console.log('couldn\'t find the player reference.')
     }
-    // if (player) {
-    //     player.getPlayerState() == 1 ? player.pauseVideo() : player.playVideo()
-    // } else {
-    //     document.querySelectorAll('.html5-player-chrome > button:first-child')[0].click()
-    // }
+}
+
+function goToNextVideo() {
+    var nextButton = document.getElementsByClassName("ytp-next-button")[0];
+    nextButton ? nextButton.click() : console.log('couldn\'t find the button reference.');
+}
+
+function goToPrevioustVideo() {
+    var prevButton = document.getElementsByClassName("ytp-prev-button")[0];
+    prevButton ? prevButton.click() : console.log('couldn\'t find the button reference.');
 }
